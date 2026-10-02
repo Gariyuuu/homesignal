@@ -1,0 +1,26 @@
+seed: 42
+target: target_growth_12m
+exclude_features: []                 # set via CLI for ablations (e.g. drop geography)
+categorical_features: [state, region, division, metro_size_bucket]
+baselines: [zero, trailing_12m, national_mean]
+linear:
+  ridge_alpha: 10.0
+  lasso_alpha: 0.01
+random_forest:
+  n_estimators: 150
+  max_depth: 14
+  min_samples_leaf: 50
+  max_features: 0.4
+  max_samples: 0.3
+lightgbm:
+  n_estimators: 600
+  learning_rate: 0.03
+  num_leaves: 63
+  min_child_samples: 200
+  subsample: 0.8
+  subsample_freq: 1
+  colsample_bytree: 0.8
+  reg_lambda: 1.0
+tuning:
+  n_trials: 25
+  folds: [2021, 2022, 2023]          # tune on the most recent backtest folds only (budget)

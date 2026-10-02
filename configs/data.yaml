@@ -1,0 +1,28 @@
+# Data build configuration. All sources are free and keyless; see docs/sources.md.
+raw_dir: data/raw
+interim_dir: data/interim
+processed_dir: data/processed
+user_agent: "homesignal/0.1 (educational research project; github.com/Gariyuuu/homesignal)"
+zillow:
+  # Raw (not smoothed, not seasonally adjusted) mid-tier ZHVI by ZIP.
+  zhvi_zip_url: https://files.zillowstatic.com/research/public_csvs/zhvi/Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_month.csv
+  zori_zip_url: https://files.zillowstatic.com/research/public_csvs/zori/Zip_zori_uc_sfrcondomfr_sm_month.csv
+acs:
+  base_url: https://www2.census.gov/programs-surveys/acs/summary_file
+  legacy_vintages: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+  table_based_vintages: [2021, 2022, 2023, 2024]
+  tables: [B01001, B01002, B01003, B15002, B15003, B19013, B23025, B25001, B25002, B25003, B25064, B25077]
+  # Vintage Y is normally released in December of Y+1; we treat it as usable from January of Y+2.
+  default_availability_lag_months: 13
+  availability_overrides:          # month from which a vintage may be used as a feature
+    2020: "2022-04"                # released 2022-03-17 (COVID delay)
+    2024: "2026-02"                # released 2026-01-08
+bls:
+  api_url: https://api.bls.gov/publicAPI/v1/timeseries/data/
+  national_series: [LNS14000000, CUUR0000SA0]   # unemployment rate (SA), CPI-U all items (NSA)
+  state_unemployment: true                       # LASST{fips}0000000000003
+  start_year: 2000
+freddie:
+  pmms_url: https://www.freddiemac.com/pmms/docs/PMMS_history.csv
+panel:
+  start_month: "2010-01"

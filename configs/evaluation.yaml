@@ -1,0 +1,6 @@
+# Time-based evaluation. Origins are month-ends; target is known at origin + 12 months.
+origin_months: [3, 6, 9, 12]         # quarterly prediction origins for modelling
+first_origin: "2013-03"              # first origin with ACS features available (2011 vintage usable 2013-01)
+backtest_validation_years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+gap_months: 12                       # training origins must satisfy origin + gap <= first validation origin
+holdout_start: "2024-01"             # never touched until the final evaluation

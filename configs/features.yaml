@@ -1,0 +1,12 @@
+# Feature construction. Every feature is listed in docs/feature_dictionary.md.
+horizon_months: 12
+momentum_horizons: [1, 3, 6, 12, 24, 36]
+volatility_window: 12
+peak_window: 36
+# Publication lags (months) applied before a series may be used at origin t.
+publication_lags:
+  cpi: 1
+  national_unemployment: 1
+  state_unemployment: 2
+  mortgage_rate: 0
+metro_size_buckets: [10, 50, 200]   # number of Zillow ZIPs in the metro: <10 small, <50 mid, <200 large, else mega
