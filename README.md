@@ -8,7 +8,7 @@ and a small Gradio demo.
 
 > **Educational project. Not financial, investment, lending or appraisal advice.**
 >
-> **Live site:** <https://homesignal-garywangsmes-8349s-projects.vercel.app> — search any ZIP, see the prediction, history and SHAP explanation (static export of the model's outputs; `web/`).
+> **Live site:** <https://homesignal-app.vercel.app> — search any ZIP, see the prediction, history and SHAP explanation (static export of the model's outputs; `web/`).
 
 ## Headline results (holdout, touched once)
 
