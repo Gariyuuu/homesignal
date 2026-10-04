@@ -39,6 +39,9 @@ report:  ## reports/evaluation.md from the saved results
 export:  ## benchmark parquet + schema for the downstream benchmarking project
 	$(HS) export
 
+web-data:  ## export static JSON for the Vercel frontend (web/public/data)
+	$(PY) web/scripts/export_web_data.py
+
 app:  ## run the demo locally
 	$(PY) app/prepare_app_data.py && $(PY) app/app.py
 

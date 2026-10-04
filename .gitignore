@@ -16,3 +16,4 @@ app/data/
 .env
 models/backtest_predictions/
 models/holdout_predictions.parquet
+web/public/data/

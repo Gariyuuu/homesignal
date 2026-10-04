@@ -7,6 +7,8 @@ pipeline, an expanding-window backtest with a 12-month gap, an untouched holdout
 and a small Gradio demo.
 
 > **Educational project. Not financial, investment, lending or appraisal advice.**
+>
+> **Live site:** <https://homesignal-garywangsmes-8349s-projects.vercel.app> — search any ZIP, see the prediction, history and SHAP explanation (static export of the model's outputs; `web/`).
 
 ## Headline results (holdout, touched once)
 
@@ -102,6 +104,7 @@ src/homesignal/
   explain/          shap_analysis.py
   cli.py tracking.py config.py
 app/                app.py prepare_app_data.py README.md (Hugging Face Space card) requirements.txt
+web/                Vite + React static frontend deployed on Vercel; scripts/export_web_data.py builds public/data
 docs/               sources.md methodology.md feature_dictionary.md known_issues.md benchmark_handoff.md
 reports/            evaluation.md model_card.md figures/ results/
 tests/              offline unit + leakage + split + integration tests (synthetic data)
