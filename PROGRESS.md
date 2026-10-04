@@ -75,3 +75,5 @@ Next: data pipeline.
 - Reproducibility (`reports/results/reproducibility.json`): two full refits and the saved artifact are bit-identical.
 - Docs: sources, methodology, feature dictionary, known issues, benchmark handoff, model card, evaluation report
   (generated), README.
+
+- Pushed to github.com/Gariyuuu/homesignal (public); GitHub Actions `ci` green on first run (ruff, mypy --strict, 33 tests).
