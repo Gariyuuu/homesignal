@@ -1,0 +1,533 @@
+{
+  "sample_rows": 20000,
+  "sample_origins": [
+    "2013-03-01",
+    "2022-12-01"
+  ],
+  "importance": {
+    "mortgage_rate_30y": 1.8097,
+    "state": 1.012,
+    "mortgage_rate_chg_12m": 0.7935,
+    "growth_12m": 0.5802,
+    "national_unemployment_chg_12m": 0.5032,
+    "growth_1m": 0.4307,
+    "zhvi_rel_metro": 0.3507,
+    "cpi_yoy": 0.2946,
+    "national_growth_12m": 0.2504,
+    "growth_36m": 0.2404,
+    "zhvi_to_acs_value": 0.2085,
+    "growth_24m": 0.1917,
+    "mortgage_rate_chg_3m": 0.1682,
+    "national_unemployment": 0.1643,
+    "state_unemployment": 0.1277,
+    "acs_median_gross_rent": 0.1094,
+    "log_zhvi": 0.0976,
+    "acs_bachelor_share": 0.0912,
+    "acs_median_home_value": 0.0862,
+    "acs_vacancy_rate": 0.0636,
+    "volatility_12m": 0.0604,
+    "state_unemployment_chg_12m": 0.0457,
+    "acs_share_65plus": 0.0393,
+    "metro_size_bucket": 0.0361,
+    "rent_growth_12m_zori": 0.0335,
+    "acs_housing_units": 0.0291,
+    "acs_renter_share": 0.0272,
+    "zhvi_rel_state": 0.0254,
+    "price_to_rent_zori": 0.0239,
+    "price_to_income": 0.021,
+    "acs_population": 0.0195,
+    "price_to_rent_acs": 0.0137,
+    "growth_6m": 0.0135,
+    "division": 0.0126,
+    "drawdown_36m": 0.0108,
+    "acs_share_25_34": 0.0105,
+    "growth_3m": 0.0104,
+    "acs_unemployment_rate": 0.0065,
+    "region": 0.0029,
+    "acs_housing_unit_growth": 0.0017,
+    "acs_share_under18": 0.0014,
+    "acs_median_age": 0.0009,
+    "acs_income_growth": 0.0,
+    "acs_pop_growth": 0.0,
+    "acs_lfpr": 0.0,
+    "acs_median_income": 0.0
+  },
+  "dependence_features": [
+    "mortgage_rate_30y",
+    "mortgage_rate_chg_12m",
+    "growth_12m",
+    "national_unemployment_chg_12m",
+    "growth_1m",
+    "zhvi_rel_metro"
+  ],
+  "local_examples": [
+    {
+      "prediction_pct": -2.98703030920513,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "cpi_yoy",
+          "value": 7.110322952270508,
+          "shap": -2.2809297385742524
+        },
+        {
+          "feature": "growth_12m",
+          "value": -12.348015785217285,
+          "shap": -1.5280060760264669
+        },
+        {
+          "feature": "growth_1m",
+          "value": -2.0621771812438965,
+          "shap": -0.9489613360706163
+        },
+        {
+          "feature": "growth_36m",
+          "value": -11.040791511535645,
+          "shap": -0.9458882655859346
+        },
+        {
+          "feature": "mortgage_rate_chg_12m",
+          "value": 3.2660000324249268,
+          "shap": -0.8233321787790718
+        },
+        {
+          "feature": "national_growth_12m",
+          "value": 6.312024116516113,
+          "shap": -0.6866966916076112
+        }
+      ],
+      "zip": "94110",
+      "origin": "2022-12-01",
+      "actual": -5.827063083648682
+    },
+    {
+      "prediction_pct": 5.428664148913295,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "national_unemployment_chg_12m",
+          "value": 0.4000000059604645,
+          "shap": 1.2841567703611947
+        },
+        {
+          "feature": "state",
+          "value": "CA",
+          "shap": 1.1827460601758444
+        },
+        {
+          "feature": "growth_12m",
+          "value": -0.41778111457824707,
+          "shap": -1.1343447057182285
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.817500114440918,
+          "shap": -0.8789512322556272
+        },
+        {
+          "feature": "growth_36m",
+          "value": -15.499022483825684,
+          "shap": -0.6125089733964137
+        },
+        {
+          "feature": "growth_1m",
+          "value": -0.002554113743826747,
+          "shap": -0.5277345629680492
+        }
+      ],
+      "zip": "94110",
+      "origin": "2025-06-01",
+      "actual": 12.694977760314941
+    },
+    {
+      "prediction_pct": -2.8820089531793136,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "cpi_yoy",
+          "value": 7.110322952270508,
+          "shap": -1.6469488743234415
+        },
+        {
+          "feature": "growth_1m",
+          "value": -2.2289459705352783,
+          "shap": -1.200334644502963
+        },
+        {
+          "feature": "state",
+          "value": "TX",
+          "shap": -1.1346198213575756
+        },
+        {
+          "feature": "mortgage_rate_chg_12m",
+          "value": 3.2660000324249268,
+          "shap": -0.9116315269631257
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.363999843597412,
+          "shap": -0.9083131885905492
+        },
+        {
+          "feature": "rent_growth_12m_zori",
+          "value": -1.047816276550293,
+          "shap": -0.9055656368434103
+        }
+      ],
+      "zip": "78702",
+      "origin": "2022-12-01",
+      "actual": -9.376785278320312
+    },
+    {
+      "prediction_pct": 2.2276081721196594,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "growth_12m",
+          "value": -9.772500038146973,
+          "shap": -1.367534042736581
+        },
+        {
+          "feature": "rent_growth_12m_zori",
+          "value": -0.740507185459137,
+          "shap": -1.212302622712327
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.817500114440918,
+          "shap": -1.1702733579939097
+        },
+        {
+          "feature": "national_unemployment_chg_12m",
+          "value": 0.4000000059604645,
+          "shap": 1.1276313990885247
+        },
+        {
+          "feature": "growth_1m",
+          "value": -0.5284180641174316,
+          "shap": -0.6679546946846251
+        },
+        {
+          "feature": "growth_36m",
+          "value": -28.90639305114746,
+          "shap": -0.6155529013710016
+        }
+      ],
+      "zip": "78702",
+      "origin": "2025-06-01",
+      "actual": -4.757624626159668
+    },
+    {
+      "prediction_pct": 4.1701135170075565,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "state",
+          "value": "FL",
+          "shap": 1.2536598617265229
+        },
+        {
+          "feature": "cpi_yoy",
+          "value": 7.110322952270508,
+          "shap": -1.245058034836672
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.363999843597412,
+          "shap": -1.1280018045790743
+        },
+        {
+          "feature": "growth_12m",
+          "value": 16.2990779876709,
+          "shap": 1.049987884446679
+        },
+        {
+          "feature": "mortgage_rate_chg_12m",
+          "value": 3.2660000324249268,
+          "shap": -0.9286340257644741
+        },
+        {
+          "feature": "national_growth_12m",
+          "value": 6.312024116516113,
+          "shap": -0.7068476414533912
+        }
+      ],
+      "zip": "33139",
+      "origin": "2022-12-01",
+      "actual": 0.09501123428344727
+    },
+    {
+      "prediction_pct": 2.3598019119474913,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.817500114440918,
+          "shap": -1.6426771765656405
+        },
+        {
+          "feature": "state",
+          "value": "FL",
+          "shap": 1.283120014269816
+        },
+        {
+          "feature": "growth_12m",
+          "value": -5.507554054260254,
+          "shap": -1.2303061881741464
+        },
+        {
+          "feature": "national_unemployment_chg_12m",
+          "value": 0.4000000059604645,
+          "shap": 1.0983159461710412
+        },
+        {
+          "feature": "rent_growth_12m_zori",
+          "value": 2.6378209590911865,
+          "shap": -1.0268785885453016
+        },
+        {
+          "feature": "growth_36m",
+          "value": -5.327552318572998,
+          "shap": -0.7320254161344026
+        }
+      ],
+      "zip": "33139",
+      "origin": "2025-06-01",
+      "actual": -0.8735281825065613
+    },
+    {
+      "prediction_pct": -1.4814970812688921,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "cpi_yoy",
+          "value": 7.110322952270508,
+          "shap": -1.4977284918186973
+        },
+        {
+          "feature": "rent_growth_12m_zori",
+          "value": -0.5837419033050537,
+          "shap": -1.0974578400941133
+        },
+        {
+          "feature": "growth_12m",
+          "value": -7.969423294067383,
+          "shap": -1.0579374577932559
+        },
+        {
+          "feature": "growth_36m",
+          "value": -0.9640476107597351,
+          "shap": -0.9207886718350246
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.363999843597412,
+          "shap": -0.7631357827527686
+        },
+        {
+          "feature": "mortgage_rate_chg_12m",
+          "value": 3.2660000324249268,
+          "shap": -0.7538576256106054
+        }
+      ],
+      "zip": "48226",
+      "origin": "2022-12-01",
+      "actual": -1.4338247776031494
+    },
+    {
+      "prediction_pct": 4.307041662675299,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "national_unemployment_chg_12m",
+          "value": 0.4000000059604645,
+          "shap": 1.1121502287640492
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.817500114440918,
+          "shap": -1.049714534116687
+        },
+        {
+          "feature": "rent_growth_12m_zori",
+          "value": 3.3323800563812256,
+          "shap": -0.7593566967720411
+        },
+        {
+          "feature": "growth_36m",
+          "value": -6.267613410949707,
+          "shap": -0.5699944610859944
+        },
+        {
+          "feature": "growth_12m",
+          "value": 2.9873270988464355,
+          "shap": -0.4617914953941757
+        },
+        {
+          "feature": "national_growth_12m",
+          "value": 1.263295292854309,
+          "shap": 0.375799932948769
+        }
+      ],
+      "zip": "48226",
+      "origin": "2025-06-01",
+      "actual": -5.48011589050293
+    },
+    {
+      "prediction_pct": -4.080925333775563,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "cpi_yoy",
+          "value": 7.110322952270508,
+          "shap": -1.675979455191608
+        },
+        {
+          "feature": "growth_1m",
+          "value": -2.9025468826293945,
+          "shap": -1.4647475374540102
+        },
+        {
+          "feature": "growth_12m",
+          "value": -7.399202346801758,
+          "shap": -1.2040092987808484
+        },
+        {
+          "feature": "growth_36m",
+          "value": -5.652462005615234,
+          "shap": -1.149717394216866
+        },
+        {
+          "feature": "state",
+          "value": "NY",
+          "shap": -0.9966603064082769
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.363999843597412,
+          "shap": -0.824699805702852
+        }
+      ],
+      "zip": "10025",
+      "origin": "2022-12-01",
+      "actual": -5.175344944000244
+    },
+    {
+      "prediction_pct": 3.5950686111668095,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.817500114440918,
+          "shap": -0.9676787592732367
+        },
+        {
+          "feature": "state",
+          "value": "NY",
+          "shap": -0.88123612948562
+        },
+        {
+          "feature": "growth_36m",
+          "value": -11.645594596862793,
+          "shap": -0.8355548613925275
+        },
+        {
+          "feature": "national_unemployment_chg_12m",
+          "value": 0.4000000059604645,
+          "shap": 0.7294002745064765
+        },
+        {
+          "feature": "acs_bachelor_share",
+          "value": 0.68788743019104,
+          "shap": -0.5119093321308094
+        },
+        {
+          "feature": "growth_12m",
+          "value": 7.972673416137695,
+          "shap": 0.5036428754840709
+        }
+      ],
+      "zip": "10025",
+      "origin": "2025-06-01",
+      "actual": 1.5194554328918457
+    },
+    {
+      "prediction_pct": 1.6930667068779492,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "cpi_yoy",
+          "value": 7.110322952270508,
+          "shap": -1.4494735841021442
+        },
+        {
+          "feature": "mortgage_rate_chg_12m",
+          "value": 3.2660000324249268,
+          "shap": -1.1478584104676564
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.363999843597412,
+          "shap": -0.98790238453832
+        },
+        {
+          "feature": "rent_growth_12m_zori",
+          "value": 1.804267168045044,
+          "shap": -0.702541284392142
+        },
+        {
+          "feature": "national_growth_12m",
+          "value": 6.312024116516113,
+          "shap": -0.5978595669047991
+        },
+        {
+          "feature": "growth_1m",
+          "value": -1.402639389038086,
+          "shap": -0.480958780097368
+        }
+      ],
+      "zip": "85004",
+      "origin": "2022-12-01",
+      "actual": 1.9987258911132812
+    },
+    {
+      "prediction_pct": 3.7556123507681787,
+      "base_value_pct": 6.8762765148769045,
+      "top_contributions": [
+        {
+          "feature": "state",
+          "value": "AZ",
+          "shap": 1.7958254262144582
+        },
+        {
+          "feature": "national_unemployment_chg_12m",
+          "value": 0.4000000059604645,
+          "shap": 1.641311048277973
+        },
+        {
+          "feature": "mortgage_rate_30y",
+          "value": 6.817500114440918,
+          "shap": -1.5696891874943175
+        },
+        {
+          "feature": "growth_12m",
+          "value": -2.7485532760620117,
+          "shap": -1.1861206408751668
+        },
+        {
+          "feature": "rent_growth_12m_zori",
+          "value": 1.713026762008667,
+          "shap": -0.9473260238167727
+        },
+        {
+          "feature": "growth_36m",
+          "value": -6.416110515594482,
+          "shap": -0.709996774155746
+        }
+      ],
+      "zip": "85004",
+      "origin": "2025-06-01",
+      "actual": -3.0142054557800293
+    }
+  ]
+}

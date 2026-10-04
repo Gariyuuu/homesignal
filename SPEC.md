@@ -42,15 +42,15 @@ computed in this run; treat suspiciously good results (R² > 0.9) as leakage unt
 modelling dataset as a single Parquet with schema + split definitions in `docs/benchmark_handoff.md`.
 
 ## Definition of Done
-- [ ] `make all` downloads, builds, trains, evaluates, writes reports with no manual steps.
-- [ ] Leakage handling documented and tested.
-- [ ] Time-based backtest with gap, plus untouched final holdout.
-- [ ] Baselines, linear, and tree models compared with per-fold metrics.
-- [ ] SHAP analysis and error analysis with figures.
-- [ ] Model card, evaluation report, feature dictionary, sources, methodology complete.
-- [ ] Demo app runs locally and is ready for Hugging Face Spaces.
-- [ ] `docs/benchmark_handoff.md` and exported modelling dataset ready.
-- [ ] Tests, ruff, mypy, CI all passing. Results reproducible with fixed seeds.
+- [x] `make all` downloads, builds, trains, evaluates, writes reports with no manual steps.
+- [x] Leakage handling documented and tested.
+- [x] Time-based backtest with gap, plus untouched final holdout.
+- [x] Baselines, linear, and tree models compared with per-fold metrics.
+- [x] SHAP analysis and error analysis with figures.
+- [x] Model card, evaluation report, feature dictionary, sources, methodology complete.
+- [x] Demo app runs locally and is ready for Hugging Face Spaces.
+- [x] `docs/benchmark_handoff.md` and exported modelling dataset ready.
+- [x] Tests, ruff, mypy, CI all passing. Results reproducible with fixed seeds.
 
 ## Stretch
 Quantile/conformal prediction intervals with backtested coverage; rent target; static map of predicted growth.

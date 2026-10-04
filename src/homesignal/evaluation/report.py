@@ -201,6 +201,7 @@ def write_reports(
             {
                 "no_geo": "Without state/region/division/metro bucket",
                 "no_acs": "Without ACS demographics",
+                "no_macro": "Without macro series (mortgage, CPI, unemployment, national regime)",
             },
         ),
         "",

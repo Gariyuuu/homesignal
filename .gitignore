@@ -14,3 +14,5 @@ models/*.joblib
 app/data/
 .DS_Store
 .env
+models/backtest_predictions/
+models/holdout_predictions.parquet

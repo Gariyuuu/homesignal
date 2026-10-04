@@ -1,0 +1,190 @@
+{
+  "model": "lightgbm_tuned",
+  "params": {
+    "boosting_type": "gbdt",
+    "class_weight": null,
+    "colsample_bytree": 0.9105432331389653,
+    "importance_type": "split",
+    "learning_rate": 0.04520529491221265,
+    "max_depth": -1,
+    "min_child_samples": 620,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.0,
+    "n_estimators": 200,
+    "n_jobs": -1,
+    "num_leaves": 18,
+    "objective": null,
+    "random_state": 42,
+    "reg_alpha": 0.008466350342833702,
+    "reg_lambda": 0.007210567759317016,
+    "subsample": 0.552657262015187,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 1,
+    "verbose": -1,
+    "deterministic": true
+  },
+  "tuned_params_file": "models/lightgbm_tuned_params.json",
+  "target": "target_growth_12m",
+  "horizon_months": 12,
+  "features": [
+    "growth_1m",
+    "growth_3m",
+    "growth_6m",
+    "growth_12m",
+    "growth_24m",
+    "growth_36m",
+    "volatility_12m",
+    "drawdown_36m",
+    "log_zhvi",
+    "price_to_income",
+    "price_to_rent_zori",
+    "price_to_rent_acs",
+    "zhvi_to_acs_value",
+    "zhvi_rel_state",
+    "zhvi_rel_metro",
+    "rent_growth_12m_zori",
+    "acs_population",
+    "acs_median_age",
+    "acs_share_under18",
+    "acs_share_25_34",
+    "acs_share_65plus",
+    "acs_bachelor_share",
+    "acs_median_income",
+    "acs_housing_units",
+    "acs_vacancy_rate",
+    "acs_renter_share",
+    "acs_median_gross_rent",
+    "acs_median_home_value",
+    "acs_unemployment_rate",
+    "acs_lfpr",
+    "acs_pop_growth",
+    "acs_income_growth",
+    "acs_housing_unit_growth",
+    "mortgage_rate_30y",
+    "mortgage_rate_chg_3m",
+    "mortgage_rate_chg_12m",
+    "national_unemployment",
+    "national_unemployment_chg_12m",
+    "cpi_yoy",
+    "state_unemployment",
+    "state_unemployment_chg_12m",
+    "national_growth_12m",
+    "state",
+    "region",
+    "division",
+    "metro_size_bucket"
+  ],
+  "categorical_features": [
+    "state",
+    "region",
+    "division",
+    "metro_size_bucket"
+  ],
+  "training_origins": [
+    "2013-03-01",
+    "2022-12-01"
+  ],
+  "training_rows": 1009637,
+  "holdout_origins": [
+    "2024-01-01",
+    "2025-06-01"
+  ],
+  "holdout_rows": 157605,
+  "holdout_metrics": {
+    "final_model": {
+      "mae": 5.835871963272805,
+      "rmse": 7.341090115698015,
+      "r2": -1.1738260023779499,
+      "spearman": 0.04401481484092147,
+      "cs_spearman": 0.09433872181072733,
+      "directional_accuracy": 0.6862726436344024,
+      "n": 157605.0
+    },
+    "baseline_zero": {
+      "mae": 4.020012529749607,
+      "rmse": 5.276845347151728,
+      "r2": -0.12318786064856457,
+      "spearman": NaN,
+      "cs_spearman": NaN,
+      "directional_accuracy": 0.6864693379017163,
+      "n": 157605.0
+    },
+    "baseline_trailing_12m": {
+      "mae": 4.471315065746557,
+      "rmse": 6.274015537328731,
+      "r2": -0.5877965298531751,
+      "spearman": 0.2648780207077948,
+      "cs_spearman": 0.31187593848674444,
+      "directional_accuracy": 0.7069382316550871,
+      "n": 157605.0
+    },
+    "baseline_national_mean": {
+      "mae": 5.773544017995773,
+      "rmse": 7.14768041500243,
+      "r2": -1.060790867777818,
+      "spearman": NaN,
+      "cs_spearman": NaN,
+      "directional_accuracy": 0.6864693379017163,
+      "n": 157605.0
+    }
+  },
+  "holdout_metrics_by_year": {
+    "2024": {
+      "mae": 6.449634326664875,
+      "rmse": 7.908581179650496,
+      "r2": -1.6529267213347372,
+      "spearman": 0.06404302250781511,
+      "cs_spearman": 0.0571338905040455,
+      "directional_accuracy": 0.6609022556390978,
+      "n": 105070.0
+    },
+    "2025": {
+      "mae": 4.6083472364886635,
+      "rmse": 6.048429524277622,
+      "r2": -0.39935720843678424,
+      "spearman": 0.16508629132902522,
+      "cs_spearman": 0.16874838442409096,
+      "directional_accuracy": 0.7370134196250119,
+      "n": 52535.0
+    }
+  },
+  "seed": 42,
+  "versions": {
+    "python": "3.11.15",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "shap": "0.51.0"
+  },
+  "data_sources": {
+    "zillow_zhvi": {
+      "downloaded_at": "2026-10-02T22:59:16+00:00",
+      "sha256": "3d2de4bdcc9a698e9e5813c31075cc61dcc21205e2f147a5117bafa0462f090e"
+    },
+    "zillow_zori": {
+      "downloaded_at": "2026-10-02T22:59:17+00:00",
+      "sha256": "a60963f429dbacf97e4371a8e4f9146322a09073d76031fc1fe477ca65183933"
+    },
+    "freddie_pmms": {
+      "downloaded_at": "2026-10-02T22:59:18+00:00",
+      "sha256": "d91ae5ab2fea079a6111cf5eb835cea1734052d2a08b342f2d8c79c92bb3dc8f"
+    },
+    "acs_vintages": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  }
+}

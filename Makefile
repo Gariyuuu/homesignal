@@ -22,6 +22,7 @@ backtest:  ## baselines, linear and tree models over the expanding-window folds
 ablations:  ## LightGBM without geography / without ACS demographics
 	$(HS) backtest --tag no_geo --models lightgbm --exclude state region division metro_size_bucket
 	$(HS) backtest --tag no_acs --models lightgbm --exclude $(shell $(PY) -c "from homesignal.features.demographics import ACS_FEATURES; print(' '.join(ACS_FEATURES))")
+	$(HS) backtest --tag no_macro --models lightgbm baseline_trailing_12m --exclude $(shell $(PY) -c "from homesignal.features.macro import MACRO_FEATURES; print(' '.join(MACRO_FEATURES))")
 
 tune:  ## modest Optuna search on recent folds
 	$(HS) tune
