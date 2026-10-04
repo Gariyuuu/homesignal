@@ -34,12 +34,13 @@ demographics changes nothing (4.91), i.e. the slow-moving demographic features a
 
 **Calibration.** On the holdout the decile calibration is flat-to-inverted: the top predicted decile
 (mean 10.7 %) realised 1.3 %, the bottom decile (3.6 %) realised 0.2 %. On the backtest folds calibration
-is monotone but compressed. Predictions should be read as rankings, not as magnitudes.
+is monotone (higher predicted deciles do realise higher growth) but the model under-predicts by 1–3 pp in
+every decile — the opposite sign of the holdout bias, which is further evidence that the level is regime noise. Predictions should be read as rankings, not as magnitudes.
 
 **Where the errors are.** Holdout MAE is 4.2 in the Midwest and 4.8 in the Northeast but 7.1 in the South
 and 7.3 in the West — the Sun Belt/West markets that boomed in 2020–21 and then stalled are exactly where
-the regime-extrapolation bias is largest (+6.6 and +7.1 pp bias). Smaller, non-metro and lower-priced ZIPs
-have higher MAE in every period (see the breakdown tables).
+the regime-extrapolation bias is largest (+6.6 and +7.1 pp bias). Non-metro ZIPs (MAE 6.2 backtest / 6.6 holdout) and bottom-quintile ZIPs (6.2 / 7.7) have the highest
+errors in both periods (see the breakdown tables).
 
 **What I would do next** (not done, to keep the holdout clean):
 
